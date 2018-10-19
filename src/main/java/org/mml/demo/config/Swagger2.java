@@ -5,7 +5,7 @@
   Time: 21:28
   To change this template use File | Settings | File Templates.
 */
-package org.mml.demo;
+package org.mml.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +13,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -37,7 +38,7 @@ public class Swagger2 {
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
                 .description("更多Spring Boot相关文章请关注：https://blog.csdn.net/smallbabylong/article/details/83155091")
                 .termsOfServiceUrl("https://blog.csdn.net/smallbabylong/article/details/83155091")
-                .contact("menglong")
+                .contact(new Contact("menglong","https://blog.csdn.net/smallbabylong","1519269558@qq.com"))
                 .version("1.0")
                 .build();
     }

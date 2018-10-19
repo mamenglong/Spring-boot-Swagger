@@ -9,14 +9,19 @@ package org.mml.demo.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
 
 @Controller
 @RequestMapping(value = "/hello")
 public class HelloController {
-    @RequestMapping(value = "/hello")
+    @GetMapping(value = "/hello")
     public String hello(){
         return "hello";
+    }
+    @GetMapping("/index")
+    public String index(){
+        return "index";
     }
 }
