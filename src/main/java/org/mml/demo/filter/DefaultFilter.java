@@ -7,6 +7,10 @@
 */
 package org.mml.demo.filter;
 
+import org.mml.demo.log.LogUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +32,7 @@ public class DefaultFilter implements Filter {
         HttpSession session = request.getSession(false);
         String uri = request.getRequestURI();
         StringBuffer url=request.getRequestURL();
-        System.out.println("*********filter url:"+url+"         filter uri:"+uri);
+        LogUtil.info("filter url:"+url+"         filter uri:"+uri);
         //是否需要过滤
         boolean needFilter = isNeedFilter(uri);
         filterChain.doFilter(servletRequest, servletResponse);
