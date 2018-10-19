@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>index</title>
 </head>
 <body>
 <a href="/swagger-ui.html">打开api文档界面</a>
